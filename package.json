@@ -11,8 +11,8 @@
     "watch:css": "pnpm exec tailwindcss -i ./css/tailwind.css -o ./public/css/tailwind.css --watch",
     "build:eleventy": "eleventy",
     "watch:eleventy": "eleventy --serve --watch",
-    "build": "npm run clean && npm run build:css && npm run build:eleventy",
-    "dev": "npm run clean && npm-run-all --parallel watch:*",
+    "build": "pnpm clean && pnpm build:css && pnpm build:eleventy",
+    "dev": "pnpm clean && npm-run-all --parallel watch:*",
     "start": "npm run build && eleventy --serve"
   },
   "repository": {
